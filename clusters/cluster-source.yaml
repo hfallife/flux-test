@@ -10,5 +10,5 @@ spec:
     branch: test
   secretRef:
     name: test-auth
-  url: https://github.com/hfallife/test
+  url: ssh://git@github.com/hfallife/test
 
