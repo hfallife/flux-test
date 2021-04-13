@@ -10,5 +10,5 @@ spec:
     branch: test
   secretRef:
     name: test-auth
-  url: ssh://git@github.com/hfallife/test
+  url: ssh://git@github.com/new-adventure-aerolite/adventure.git
 
