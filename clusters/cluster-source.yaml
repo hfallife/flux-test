@@ -1,0 +1,14 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: test
+  namespace: flux-system
+spec:
+  interval: 3s
+  ref:
+    tag: "0.1"
+  secretRef:
+    name: test-auth
+  url: ssh://git@github.com/hfallife/test
+
