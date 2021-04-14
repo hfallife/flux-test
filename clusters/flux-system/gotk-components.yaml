@@ -2533,7 +2533,7 @@ spec:
             fieldRef:
               fieldPath: metadata.namespace
         image: tqhuang2021/kustomize-controller:xhack-v0.11.0
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         livenessProbe:
           httpGet:
             path: /healthz
