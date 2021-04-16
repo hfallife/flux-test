@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5s
-  path: ./config/k8s/application/upm-api-analyse
+  path: ./config/k8s/application/upm-api-operate
   prune: true
   sourceRef:
     kind: GitRepository
