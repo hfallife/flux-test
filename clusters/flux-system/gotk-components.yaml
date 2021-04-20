@@ -2519,8 +2519,13 @@ spec:
         prometheus.io/scrape: "true"
       labels:
         app: kustomize-controller
+        aadpodidbinding: sops-akv-decryptor
     spec:
       containers:
+      - name: manager
+        env:
+        - name: AZURE_AUTH_METHOD
+          value: msi
       - args:
         - --events-addr=http://notification-controller/
         - --watch-all-namespaces=true
