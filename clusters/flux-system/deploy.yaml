@@ -14,11 +14,4 @@ spec:
         env:
         - name: AZURE_AUTH_METHOD
           value: msi
-      initContainers:
-      - name: init-myservice
-        image: busybox:1.28
-        command: ['wget', 'https://aka.ms/InstallAzureCLIDeb', '|', 'sh']
-        volumeMounts:
-        - name: temp
-          mountPath: /tmp
-        
+
