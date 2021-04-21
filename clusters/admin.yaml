@@ -5,6 +5,8 @@ metadata:
   name: admin
   namespace: flux-system
 spec:
+  decryption:
+    provider: sops
   interval: 5s
   path: ./config/k8s/application/upm-api-admin
   prune: true
