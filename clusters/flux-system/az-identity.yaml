@@ -4,6 +4,6 @@ metadata:
   name: sops-akv-decryptor  # kustomize-controller label will match this name
   namespace: flux-system
 spec:
-  clientID: 9113a845-c753-4780-a161-b7bf5b2d7b48
-  resourceID: /subscriptions/87930b6b-de43-4a8a-b771-259b59f33ff4/resourceGroups/upm-aks-dev-demo-01/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sops-akv-decryptor
+  clientID: 988e0ff8-7bac-4daa-b5db-421247be0275
+  resourceID: /subscriptions/87930b6b-de43-4a8a-b771-259b59f33ff4/resourcegroups/upm-aks-dev-demo-01/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sops-akv-decryptor
   type: 0  # user-managed identity
