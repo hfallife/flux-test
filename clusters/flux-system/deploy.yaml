@@ -14,4 +14,11 @@ spec:
         env:
         - name: AZURE_AUTH_METHOD
           value: msi
+        image: hfallife/kustomize-controller:xhack
+      #   volumeMounts:
+      #   - mountPath: /home/controller
+      #     name: controller
+      # volumes:
+      # - emptyDir: {}
+      #   name: controller 
 
