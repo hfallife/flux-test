@@ -2,11 +2,11 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
-  name: admin
+  name: upm-service
   namespace: flux-system
 spec:
-  interval: 5s
-  path: ./config/k8s/application/upm-api-admin
+  interval: 10m0s
+  path: ./config/k8s/variants/development/upm-service
   prune: true
   sourceRef:
     kind: GitRepository

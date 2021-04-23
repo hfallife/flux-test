@@ -14,7 +14,30 @@ spec:
         env:
         - name: AZURE_AUTH_METHOD
           value: msi
+        - name: USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: flux-auth
+              key: username
+        - name: PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: flux-auth
+              key: password
         image: hfallife/kustomize-controller:xhack
+        lifecycle:
+          postStart:
+            exec:
+              command:
+                - sh
+                - "-c"
+                - echo "machine github.com login username $USERNAME password $PASSWORD" > ~/.netrc
+        volumeMounts:
+        - mountPath: /home/controller
+          name: ssh
+      volumes:
+      - emptyDir: {}
+        name: ssh
       #   volumeMounts:
       #   - mountPath: /home/controller
       #     name: controller
