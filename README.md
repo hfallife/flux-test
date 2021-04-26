@@ -1,1 +1,3 @@
-# flux-test
+# FluxCD v2
+
+## Setup
