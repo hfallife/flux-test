@@ -7,8 +7,8 @@ metadata:
 spec:
   interval: 3s
   ref:
-    branch: flux-test
+    branch: flux-test-1
   secretRef:
-    name: test-auth
-  url: ssh://git@github.com/EnterpriseDB/upm-substrate.git
+    name: flux-auth
+  url: https://github.com/EnterpriseDB/upm-substrate.git
 
