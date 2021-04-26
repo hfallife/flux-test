@@ -7,7 +7,7 @@ spec:
   template:
     metadata:
       labels:
-        aadpodidbinding: sops-akv-decryptor  # match the AzureIdentity name
+        aadpodidbinding: sops-akv-decryptor  # match the AzureIdentity spec.selector name
     spec:
       containers:
       - name: manager
@@ -19,12 +19,12 @@ spec:
         - name: USERNAME
           valueFrom:
             secretKeyRef:
-              name: flux-auth
+              name: flux-system
               key: username
         - name: PASSWORD
           valueFrom:
             secretKeyRef:
-              name: flux-auth
+              name: flux-system
               key: password
         image: hfallife/kustomize-controller:xhack
         lifecycle:
@@ -40,10 +40,5 @@ spec:
       volumes:
       - emptyDir: {}
         name: ssh
-      #   volumeMounts:
-      #   - mountPath: /home/controller
-      #     name: controller
-      # volumes:
-      # - emptyDir: {}
-      #   name: controller 
+
 

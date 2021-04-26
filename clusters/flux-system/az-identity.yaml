@@ -4,14 +4,15 @@ metadata:
   name: sops-akv-decryptor  # kustomize-controller label will match this name
   namespace: flux-system
 spec:
-  clientID: 988e0ff8-7bac-4daa-b5db-421247be0275
-  resourceID: /subscriptions/87930b6b-de43-4a8a-b771-259b59f33ff4/resourcegroups/upm-aks-dev-demo-01/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sops-akv-decryptor
+  clientID: 6d2310a2-38fb-4d9d-a929-323f7d0d0658
+  resourceID: /subscriptions/87930b6b-de43-4a8a-b771-259b59f33ff4/resourcegroups/rg-uksouth-demo-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sops-akv-decryptor
   type: 0  # user-managed identity
 ---
 apiVersion: "aadpodidentity.k8s.io/v1"
 kind: AzureIdentityBinding
 metadata:
   name: myapp-azure-identity-binding
+  namespace: flux-system
 spec:
   azureIdentity: sops-akv-decryptor
   selector: sops-akv-decryptor

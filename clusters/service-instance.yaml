@@ -5,6 +5,8 @@ metadata:
   name: service-instance
   namespace: flux-system
 spec:
+  dependsOn:
+  - name: service-definition
   interval: 10m0s
   path: ./config/k8s/variants/development/service-instance
   prune: true

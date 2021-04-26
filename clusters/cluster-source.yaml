@@ -9,6 +9,6 @@ spec:
   ref:
     branch: flux-test
   secretRef:
-    name: flux-auth
+    name: flux-system
   url: https://github.com/EnterpriseDB/upm-substrate.git
 
