@@ -1,0 +1,26 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: default
+  namespace: istio-system
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "upm.eastus2.cloudapp.azure.com"
+    tls:
+      httpsRedirect: true # 301
+  - port:
+      number: 443
+      name: https-443
+      protocol: HTTPS
+    hosts:
+    - "upm.eastus2.cloudapp.azure.com"
+    tls:
+      mode: SIMPLE 
+      credentialName: istio-gw-cert
